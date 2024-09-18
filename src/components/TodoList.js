@@ -5,13 +5,13 @@ const TodoList = ({ todos, todoDelete, todoToogleCompleted, todoE }) => {
 
     return(
         <div>
-            <h3 className="text-start display-7 ">Lista de que haceres</h3>  
+            <h3 className="text-start display-7 ">To do list</h3>  
 
             {   
                 todos.length === 0 ? 
                 (
                     <div className="alert alert-primary">
-                        No hay tareas. Por favor ingresa una
+                        There are no tasks. Please enter one.
                     </div>
                 )
                 :

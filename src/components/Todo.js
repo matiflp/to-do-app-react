@@ -10,7 +10,7 @@ const Todo = ({ todo, todoDelete, todoToogleCompleted, todoE }) => {
                             onClick={() => todoToogleCompleted(todo.id)}
                             className={`btn btn-sm ${todo.completed ? 'btn-outline-success' : 'btn-success'} float-end`}
                         >
-                            {todo.completed ? 'Terminado' : 'Terminar'}
+                            {todo.completed ? 'Finished' : 'Finish'}
                         </button>
                     </h3>
                     <p className="card-text text-start">
@@ -22,13 +22,13 @@ const Todo = ({ todo, todoDelete, todoToogleCompleted, todoE }) => {
                             onClick={() => todoE(todo)}
                             className="btn btn-sm btn-outline-primary me-2"
                         >
-                            Editar
+                            Edit
                         </button>
                          <button
                              onClick={() => todoDelete(todo.id)}
                             className="btn btn-sm btn-outline-danger"
                         >
-                            Eliminar
+                            Delete
                         </button>
                     </div>
                 </div>

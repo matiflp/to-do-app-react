@@ -32,24 +32,24 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
         e.preventDefault();
         
         if(title.trim() === '') {
-            setError('Debes indicar un titulo');
+            setError('You must indicate a title');
             return;
         }
 
         if(description.trim() === '') {
-            setError('Debes indicar una descripción');
+            setError('You must indicate a description');
             return;
         }
 
         if(todoEdit) {
             todoUpdate(formValues);
             // Establezco el mensaje de existo
-            setSuccessMessage('Item actualizado con éxito');
+            setSuccessMessage('Item updated successfully');
         }
         else{
             todoApp(formValues);
             // Establezco el mensaje de existo
-            setSuccessMessage('Item agregado con éxito');
+            setSuccessMessage('Item added successfully');
             // Reinicio el formulario
             setFormValues(initialFormValues);
         }
@@ -63,7 +63,7 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
 
     return(
         <div>
-            <h3 className="text-start display-7">{todoEdit ? 'Editar Tarea' : 'Nueva Tarea'}</h3>
+            <h3 className="text-start display-7">{todoEdit ? 'Edit Task' : 'New Task'}</h3>
 
             {
                 todoEdit &&
@@ -71,7 +71,7 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
                     onClick={() => todoE(null)} 
                     className="btn btn-sm btn-warning mb-2"
                 >
-                    Cancelar edición
+                    Cancel editing
                 </button>
             }
 
@@ -80,7 +80,7 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
 
                 <input 
                     type='text' 
-                    placeholder='Titulo' 
+                    placeholder='Title' 
                     className='form-control'
                     value={title}
                     name="title"
@@ -88,7 +88,7 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
                 />
 
                 <textarea 
-                    placeholder="Descripción" 
+                    placeholder="Description" 
                     className="form-control mt-2"
                     value={description}
                     name="description"
@@ -98,7 +98,7 @@ const TodoForm = ({ todoApp, todoEdit, todoUpdate, todoE }) => {
                 <button 
                     className="btn btn-primary btn-block mt-2"
                 >
-                    {todoEdit ? 'Editar Tarea' : 'Nueva Tarea'}
+                    {todoEdit ? 'Edit Task' : 'New Task'}
                 </button>
             </form>
 

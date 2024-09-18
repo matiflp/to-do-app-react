@@ -5,14 +5,14 @@ import TodoForm from "./components/TodoForm";
 const initialTodo = [
     {
         id: 1,
-        title: 'Todo #1',
-        description: 'Description Todo #1',
+        title: 'To do #1',
+        description: 'Description To do #1',
         completed: false
     },
     {
         id: 2,
-        title: 'Todo #2',
-        description: 'Description Todo #2',
+        title: 'To do #2',
+        description: 'Description To do #2',
         completed: true
     }
 ];
